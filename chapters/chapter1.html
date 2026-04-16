@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 1: Variables & Datatypes</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1>Chapter 1: Variables, Datatypes & Operators</h1>
+</header>
+
+<div class="content">
+
+  <h2>1. First Python Program</h2>
+
+  <div class="code-cell">
+<pre><code>
+print('Hello world')
+print("Hello world")
+print("""Hello world""")
+</code></pre>
+  </div>
+
+  <div class="output">
+Hello world
+Hello world
+Hello world
+  </div>
+
+  <div class="code-cell">
+<pre><code>
+print('My name is Adam, I am a student')
+</code></pre>
+  </div>
+
+  <div class="output">
+My name is Adam, i am a student
+  </div>
+
+  <hr>
+
+  <h2>2. Variables</h2>
+  <p>Variables are containers that store data in memory.</p>
+
+  <div class="code-cell">
+<pre><code>
+name = "ADAM"
+age = 24
+print("My name is:", name, "I am", age, "years old")
+</code></pre>
+  </div>
+
+  <div class="output">
+My name is: ADAM I am 24 years old
+  </div>
+
+  <hr>
+
+  <h2>3. Datatypes</h2>
+
+  <ul>
+    <li>Integer → 10, -20</li>
+    <li>Float → 3.5</li>
+    <li>String → "Hello"</li>
+    <li>Boolean → True / False</li>
+    <li>None</li>
+  </ul>
+
+  <div class="code-cell">
+<pre><code>
+name = "ADAM"
+age = 24
+CGPA = 3.9
+
+print(type(name))
+print(type(age))
+print(type(CGPA))
+</code></pre>
+  </div>
+
+  <div class="output">
+&lt;class 'str'&gt;
+&lt;class 'int'&gt;
+&lt;class 'float'&gt;
+  </div>
+
+  <hr>
+
+  <h2>4. Arithmetic Operators</h2>
+
+  <div class="code-cell">
+<pre><code>
+x = 90
+y = 7
+
+print("Addition =", x+y)
+print("Subtraction =", x-y)
+print("Multiplication =", x*y)
+print("Division =", x/y)
+print("Quotient =", x//y)
+print("Remainder =", x%y)
+print("Exponentiation =", x**y)
+</code></pre>
+  </div>
+
+  <div class="output">
+Addition = 97  
+Subtraction = 83  
+Multiplication = 630  
+Division = 12.857...  
+Quotient = 12  
+Remainder = 6  
+Exponentiation = 47829690000000
+  </div>
+
+  <hr>
+
+  <h2>5. Expression Execution</h2>
+
+  <div class="code-cell">
+<pre><code>
+a = '2'
+b = '3'
+print(a + b)
+</code></pre>
+  </div>
+
+  <div class="output">23</div>
+
+  <div class="code-cell">
+<pre><code>
+a, b = 2, 3
+c = "bob"
+print(a * c * b)
+</code></pre>
+  </div>
+
+  <div class="output">bobbobbobbobbobbob</div>
+
+  <hr>
+
+  <h2>6. Relational Operators</h2>
+
+  <div class="code-cell">
+<pre><code>
+a = 30
+b = 20
+
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+</code></pre>
+  </div>
+
+  <div class="output">
+False  
+True  
+True  
+False
+  </div>
+
+  <hr>
+
+  <h2>7. Assignment Operators</h2>
+
+  <div class="code-cell">
+<pre><code>
+i = 10
+i += 10
+print(i)
+</code></pre>
+  </div>
+
+  <div class="output">20</div>
+
+  <hr>
+
+  <h2>8. Logical Operators</h2>
+
+  <div class="code-cell">
+<pre><code>
+a = False
+print(not a)
+
+b = True
+print(a and b)
+
+print(a or b)
+</code></pre>
+  </div>
+
+  <div class="output">
+True  
+False  
+True
+  </div>
+
+  <hr>
+
+  <h2>9. Type Conversion & Casting</h2>
+
+  <div class="code-cell">
+<pre><code>
+a = 3.5
+b = 2
+print(a + b)
+</code></pre>
+  </div>
+
+  <div class="output">5.5</div>
+
+  <div class="code-cell">
+<pre><code>
+a = float("3.5")
+b = 2
+print(a + b)
+</code></pre>
+  </div>
+
+  <div class="output">5.5</div>
+
+  <hr>
+
+  <h2>10. User Input</h2>
+
+  <div class="code-cell">
+<pre><code>
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+print(name, age)
+</code></pre>
+  </div>
+
+  <hr>
+
+  <h2>11. Practice Problems</h2>
+
+  <h3>Average Marks: Take student marks as user input and find average of 3 subject marks.</h3>
+
+  <div class="code-cell">
+<pre><code>
+E = int(input("English: "))
+B = int(input("Bangla: "))
+M = int(input("Math: "))
+
+avg = (E+B+M)//3
+print(avg)
+</code></pre>
+  </div>
+
+  <h3>Area of Square:Take a side of square from user and find out the Area of Square.</h3>
+
+  <div class="code-cell">
+<pre><code>
+a = float(input("Enter side: "))
+print(a*a)
+</code></pre>
+  </div>
+
+</div>
+
+</body>
+</html>
