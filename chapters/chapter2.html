@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 2: Conditions </title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1>Chapter 2:Conditions</h1>
+</header>
+
+<div class="content">
+
+  <h2>Conditional Statement</h2>
+
+  <div class="code-cell">
+<pre><code>
+syntax-
+
+if(condition): print("statment 1")
+
+elif(condition): print("statment 2")......
+
+else: print("statment N")
+</code></pre>
+  </div>
+
+
+  <h2>if condition</h2>
+  <div class="code-cell">
+<pre><code>
+    #if condition
+    age = 10
+    if (age < 18 ):
+        print("You are a kid")
+
+
+</code></pre>
+  </div>
+
+  <div class="output">
+You are a kid
+  </div>
+
+  <hr>
+
+  <h2>if-elif</h2>
+  <p>Use when there are more then 2 Conditions</p>
+
+  <div class="code-cell">
+<pre><code>
+#if-elif
+age = 19
+if (age < 18):
+  print ("You are a kid")
+elif (age >= 18):
+  print("You are an adult")
+</code></pre>
+  </div>
+
+  <div class="output">
+You are an adult
+  </div>
+
+  <hr>
+
+  <h2>#if-elif-else</h2>
+
+  <div class="code-cell">
+<pre><code>
+
+#if-elif-else
+age = 60
+if (age < 18):
+  print ('You are a kid')
+
+elif (age >=18 and age < 50):
+  print("You are an adult")
+
+else:
+    print("You are a senior citizen")
+
+</code></pre>
+  </div>
+
+  <div class="output">
+You are a senior citizen
+  </div>
+
+  <hr>
+
+  <h2>Example: 1</h2>
+
+  <p>Take a traffic light code from user (Red,Yellow,Green) and give suggestion
+(Stop,Ready,Go) and if the user input not matching with light colors suggest
+(Broken Light)</p>
+
+  <div class="code-cell">
+<pre><code>
+light = input("What is the color of traffic light? ")
+
+if (light == "Red"):
+  print("Stop")
+
+elif (light == "Green"):
+  print('Go')
+
+elif (light == " Yellow"):
+  print("Ready")
+
+else:
+   print("Broken light")
+</code></pre>
+  </div>
+
+  <div class="output">
+What is the color of traffic light? yellow
+<br>Broken light
+  </div>
+
+  <hr>
+
+  <h2>Example: 2</h2>
+  <p>Take student marks as user input to give them grade- <br>
+if marks is more then or equal to 90 give -A <br>
+if marks is more then or equal to 80 give -B <br>
+if marks is more then or equal to 70 give -C <br>
+if marks is more then or equal to 50 give - D <br>
+if less then 50 give - Fail</p>
+
+  <div class="code-cell">
+<pre><code>
+marks = int (input ("What is your marks?") )
+
+if(marks >= 90):
+  print('Grade - A')
+elif(marks >= 80 and marks <90):
+  print("Grade -B")
+elif(marks >=70 and marks <80):
+  print("Grade -C")
+elif(marks >=50 and marks <70):
+  print("Grade -D")
+else:
+  print("Fail")
+</code></pre>
+  </div>
+
+  <div class="output">
+    
+What is your marks?9 <br>
+Fail
+    
+  </div>
+
+      <h2>Nested condition</h2>
+<p>User can apply for driving license when they have NID and Birth_certificate and age range is not less then 16 and not more then 80.
+<br>1.if they have NID, Birth_certificate but age less then 15 then suggest "You are a kid you are not safe to drive"
+<br>2.if they have NID, Birth_certificate also age more then 18 and less then 70 suggest "You are an adult you are safe to drive"
+<br>3.if they have NID, Birth_certificate also age more then 70 suggest "You are a senior citizen you are not safe to drive"
+<br>4.if they have Birth_certificate but not NID suggest "First Apply for NID"
+<br>5.Otherwise suggest "You can not apply for driving license</p>
+  <div class="code-cell">
+<pre><code>
+NID = input("Do you have NID? ").lower()
+Birth_certificate = input("Do you have Birth_certificate? ").lower()
+age = int(input("How old are you? "))
+
+if (NID == "yes"):
+    if (Birth_certificate == "yes"):
+        if (age < 16):
+            print("You are a kid you are not safe to drive")
+        
+        elif (age >= 18 and age < 70):
+            print("You are an adult you are safe to drive")
+        
+        elif (age > 70):
+            print("You are a senior citizen you are not safe to drive")
+        
+    
+    else:
+        print("You can not apply for driving licence")
+
+else:
+    if (Birth_certificate == "yes" and NID != "yes"):
+        print("First Apply for NID")
+    else:
+        print("You can not apply for driving licence")
+   
+</code></pre>
+  </div>
+
+  <div class="output">
+    Do you have NID? no <br>
+Do you have Birth_certificate? yes <br>
+How old are you? 45 <br>
+First Apply for NID
+  </div>
+
+</div>
+
+</body>
+</html>

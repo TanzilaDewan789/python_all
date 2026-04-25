@@ -17,6 +17,7 @@
 
   <div class="code-cell">
 <pre><code>
+ #String can print in 3 ways
 print('Hello world')
 print("Hello world")
 print("""Hello world""")
@@ -24,19 +25,20 @@ print("""Hello world""")
   </div>
 
   <div class="output">
-Hello world
-Hello world
-Hello world
+Hello world <br>
+Hello world <br>
+Hello world <br>
   </div>
 
   <div class="code-cell">
 <pre><code>
+  #Print your name and occupation.
 print('My name is Adam, I am a student')
 </code></pre>
   </div>
 
   <div class="output">
-My name is Adam, i am a student
+My name is Adam, I am a student
   </div>
 
   <hr>
@@ -46,7 +48,7 @@ My name is Adam, i am a student
 
   <div class="code-cell">
 <pre><code>
-name = "ADAM"
+name = "ADAM" # name is variable and ADAM is data 
 age = 24
 print("My name is:", name, "I am", age, "years old")
 </code></pre>
@@ -74,16 +76,16 @@ name = "ADAM"
 age = 24
 CGPA = 3.9
 
-print(type(name))
-print(type(age))
-print(type(CGPA))
+print(type(name)) <br>
+print(type(age)) <br>
+print(type(CGPA)) <br>
 </code></pre>
   </div>
 
   <div class="output">
-&lt;class 'str'&gt;
-&lt;class 'int'&gt;
-&lt;class 'float'&gt;
+&lt;class 'str'&gt; <br>
+&lt;class 'int'&gt; <br>
+&lt;class 'float'&gt; <br>
   </div>
 
   <hr>
@@ -106,13 +108,13 @@ print("Exponentiation =", x**y)
   </div>
 
   <div class="output">
-Addition = 97  
-Subtraction = 83  
-Multiplication = 630  
-Division = 12.857...  
-Quotient = 12  
-Remainder = 6  
-Exponentiation = 47829690000000
+Addition = 97 <br>  
+Subtraction = 83 <br> 
+Multiplication = 630 <br> 
+Division = 12.857... <br> 
+Quotient = 12  <br>
+Remainder = 6  <br>
+Exponentiation = 47829690000000 <br>
   </div>
 
   <hr>
@@ -141,6 +143,7 @@ print(a * c * b)
 
   <hr>
 
+
   <h2>6. Relational Operators</h2>
 
   <div class="code-cell">
@@ -156,10 +159,10 @@ print(a < b)
   </div>
 
   <div class="output">
-False  
-True  
-True  
-False
+False  <br>
+True <br> 
+True  <br>
+False <br>
   </div>
 
   <hr>
@@ -169,13 +172,66 @@ False
   <div class="code-cell">
 <pre><code>
 i = 10
-i += 10
+i += 10 # i = i + 10
 print(i)
 </code></pre>
   </div>
 
   <div class="output">20</div>
 
+
+<div class="code-cell">
+<pre><code>
+i = 20
+i -=10 # i =i-10 = 20- 10
+print (i)
+</code></pre>
+  </div>
+
+  <div class="output">10</div>
+
+
+  <div class="code-cell">
+<pre><code>
+i = 20
+i *=10 # i =i*10 = 20*10
+print (i)
+</code></pre>
+  </div>
+
+  <div class="output">200</div>
+
+
+  <div class="code-cell">
+<pre><code>
+i = 20
+i /=10 # i =i/10 = 20/10
+print (i)
+</code></pre>
+  </div>
+
+  <div class="output">2.0</div>
+
+
+  <div class="code-cell">
+<pre><code>
+i = 20
+i %=10 # i =i%10 = 20 % 10
+print (i)
+</code></pre>
+  </div>
+
+  <div class="output">0</div>
+
+    <div class="code-cell">
+<pre><code>
+i = 2
+i **=3 # i =i-10 = 2^3
+print (i)
+</code></pre>
+  </div>
+
+  <div class="output">8</div>
   <hr>
 
   <h2>8. Logical Operators</h2>
@@ -193,9 +249,9 @@ print(a or b)
   </div>
 
   <div class="output">
-True  
-False  
-True
+True <br> 
+False  <br>
+True <br>
   </div>
 
   <hr>
@@ -204,6 +260,7 @@ True
 
   <div class="code-cell">
 <pre><code>
+  #Type Conversion (automatically convert int to float values)
 a = 3.5
 b = 2
 print(a + b)
@@ -214,6 +271,7 @@ print(a + b)
 
   <div class="code-cell">
 <pre><code>
+  #Type Casting( manual conversion from string to float or int)
 a = float("3.5")
 b = 2
 print(a + b)
@@ -230,8 +288,9 @@ print(a + b)
 <pre><code>
 name = input("Enter your name: ")
 age = int(input("Enter your age: "))
+CGPA = float (input("Enter your CGPA: "))
 
-print(name, age)
+print(name, age, CGPA)
 </code></pre>
   </div>
 
