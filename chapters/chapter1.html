@@ -144,6 +144,36 @@ print(a * c * b)
   <hr>
 
 
+
+    <div class="code-cell">
+<pre><code>
+a,b = '2', 3
+c = "bob"
+print((a+c)*b)
+#(('2'+'bob')*3) = 2bob*3
+
+</code></pre>
+  </div>
+
+  <div class="output">2bob2bob2bob</div>
+
+  <hr>
+
+
+      <div class="code-cell">
+<pre><code>
+Remainder is negative when denominator is negative, otherwise positive.
+a,b = 5, -2
+print(a%b)
+
+</code></pre>
+  </div>
+
+  <div class="output">-1</div>
+
+  <hr>
+
+
   <h2>6. Relational Operators</h2>
 
   <div class="code-cell">
@@ -155,6 +185,8 @@ print(a == b)
 print(a != b)
 print(a > b)
 print(a < b)
+print(a >= b)
+print(a <= b)
 </code></pre>
   </div>
 
@@ -162,6 +194,8 @@ print(a < b)
 False  <br>
 True <br> 
 True  <br>
+False <br>
+True <br>
 False <br>
   </div>
 
@@ -226,7 +260,7 @@ print (i)
     <div class="code-cell">
 <pre><code>
 i = 2
-i **=3 # i =i-10 = 2^3
+i **=3 # i =i^3 = 2^3
 print (i)
 </code></pre>
   </div>
@@ -235,15 +269,25 @@ print (i)
   <hr>
 
   <h2>8. Logical Operators</h2>
+  <p> 3 types of Logical Operators are: 
+    1. not <br>
+    2. and <br>
+    3. or <br>
+    not > and > or
+  </p>
 
   <div class="code-cell">
 <pre><code>
+  #not: return the opposite values
 a = False
 print(not a)
 
-b = True
+  #and: when a and b both are True only then the result is True
+
+  b = True
 print(a and b)
 
+  #or: when a and b both are False only then result is False
 print(a or b)
 </code></pre>
   </div>
