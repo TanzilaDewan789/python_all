@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Chapter 2: Conditions </title>
+  <title>Chapter 2: Conditions & Strings </title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -19,11 +19,14 @@
 <pre><code>
 syntax-
 
-if(condition): print("statment 1")
+if(condition): 
+  print("statment 1")
 
-elif(condition): print("statment 2")......
+elif(condition): 
+  print("statment 2")......
 
-else: print("statment N")
+else: 
+  print("statment N")
 </code></pre>
   </div>
 
@@ -197,6 +200,251 @@ Do you have Birth_certificate? yes <br>
 How old are you? 45 <br>
 First Apply for NID
   </div>
+
+<hr>
+
+<h1>Strings</h1>
+<p>A datatype that stores sequence of characters.</p>
+
+<h2>f-string</h2>
+
+<div class="code-cell">
+<pre><code>
+name = "Musa"
+age = 23
+print(f'My name is {name}. I am {age} years old.')
+</code></pre>
+</div>
+
+<div class="output">
+My name is Musa. I am 23 years old.
+</div>
+
+<h2>Concatenation of string</h2>
+<p>Combining or adding two or more strings</p>
+
+<div class="code-cell">
+<pre><code>
+name = "Musa"
+age = 23
+print("My name is " + name + ". I am " + str(age) + " years old.")
+</code></pre>
+</div>
+
+<div class="output">
+My name is Musa. I am 23 years old.
+</div>
+
+
+<hr>
+
+<h2>Escape sequence</h2>
+<div class="code-cell">
+<pre><code>
+print("My name is Musa.\n I am 23 years old. \t My CGPA is 3.57 out of 4.00")
+</code></pre>
+</div>
+
+<div class="output">
+<pre><code>
+My name is Musa.
+ I am 23 years old.     My CGPA is 3.57 out of 4.00
+</code></pre>
+</div>
+
+
+<hr>
+
+<h2>Length of string:</h2>
+<p>Print your full name and length of the full name.</p>
+<div class="code-cell">
+<pre><code>
+name1 = "Musa"
+print(len(name1))
+name2 = "Khwarizmi"
+print(len(name2))
+full_name= name1 + " " + name2
+print(full_name)
+print(len(full_name))
+</code></pre>
+</div>
+
+<div class="output">
+4 <br>
+9 <br>
+Musa Khwarizmi <br>
+14 <br>
+</div>
+
+
+
+
+<hr>
+
+<h2>Index of string:</h2>
+<p>Position of character, use to access character
+
+<br>1.Positive Index( Left to right) start from 0,1,2,3....9
+<br>2.Negative Index (Right to left) start from last word of the sentence. -10, -11, -9....-1</p>
+<div class="code-cell">
+<pre><code>
+fruits = "Apple & Orange"<br>
+#what is 4th & last number character <br>
+print(fruits[3]) #positive index start from 0
+print(fruits[-1])#negative index start backword from -1
+</code></pre>
+</div>
+
+<div class="output">
+
+l <br>
+e
+</div>
+
+
+<hr>
+
+<h2>Slicing</h2>
+<p>Accessing parts of string</p>
+<div class="code-cell">
+<pre><code>
+fruits = "Venus_Earth"
+print(fruits[2:5])#Ending index dosen't include
+print(fruits[:5]) #[first:5]
+print(fruits[5:])#[5:last index]
+print(fruits[5:len(fruits)])#[5:last index]
+<br>
+#negative index
+print(fruits[-5:-2])
+</code></pre>
+</div>
+
+<div class="output">
+
+nus <br>
+Venus <br>
+_Earth <br>
+_Earth <br>
+Ear
+</div>
+
+
+<hr>
+
+<h2>String Function</h2>
+
+<div class="code-cell">
+<pre><code>
+#print all the planets name in uppercase <br>
+planets = "mercury, venus, earth, mars, jupiter, saturn, uranus, neptune"
+print(planets.upper())
+
+#print all the planets name in lowercase <br>
+print(planets.lower())
+</code></pre>
+</div>
+
+<div class="output">
+MERCURY, VENUS, EARTH, MARS, JUPITER, SATURN, URANUS, NEPTUNE <br>
+mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
+</div>
+
+
+<div class="code-cell">
+<pre><code>
+#Find if the last planets "saturn" or "neptune"? <br>
+print(planets.endswith('saturn'))
+print(planets.endswith('neptune'))
+</code></pre>
+</div>
+
+<div class="output">
+False <br>
+True
+</div>
+
+
+<div class="code-cell">
+<pre><code>
+#Capitalized only 1st starting planet name <br>
+print(planets.capitalize())
+planets = planets.capitalize()
+print(planets)
+</code></pre>
+</div>
+
+<div class="output">
+Mercury, venus, earth, mars, jupiter, saturn, uranus, neptune <br>
+Mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
+</div>
+
+
+<div class="code-cell">
+<pre><code>
+#Replace 'earth' to our 'planet' <br>
+print(planets.replace('earth','our planet'))
+</code></pre>
+</div>
+
+<div class="output">
+Mercury, venus, our planet, mars, jupiter, saturn, uranus, neptune
+</div>
+
+
+<div class="code-cell">
+<pre><code>
+#Find u & count total number of u <br>
+print (planets.find('u'))
+print(planets.count('u'))
+</code></pre>
+</div>
+
+<div class="output">
+4 <br>
+7
+</div>
+<div class="code-cell">
+<pre><code>
+#Capitalized all the title of planets <br>
+planets = "Mercury, venus, our planet, mars, jupiter, saturn, uranus, neptune"
+print(planets.title())
+</code></pre>
+</div>
+
+<div class="output">
+Mercury, Venus, Our Planet, Mars, Jupiter, Saturn, Uranus, Neptune
+</div>
+
+
+<p>Empty strings</p>
+<div class="code-cell">
+<pre><code>
+name_age_CGPA = input("input:")
+print(name_age_CGPA)
+</code></pre>
+</div>
+
+<div class="output">
+input:musa 25 4.00 <br>
+musa 25 4.00
+</div>
+
+<p>Store as Strings & return as List</p>
+<div class="code-cell">
+<pre><code>
+name_age_CGPA = input("input:").split()
+print(name_age_CGPA)
+print(type(name_age_CGPA[1]))
+print(name_age_CGPA[1])
+</code></pre>
+</div>
+
+<div class="output">
+input:musa 25 4.00 <br>
+['musa', '25', '4.00'] <br>
+&lt;class 'str'&gt;<br>
+25
+</div>
 
 </div>
 
